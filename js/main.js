@@ -137,12 +137,12 @@
 
   /* posição relativa à foto (0..1 = dentro da foto), tamanho, rotação e cor */
   var LEAVES = [
-    { x: -0.46, y: 0.06, s: 30, r: -30, c: 'var(--peach)' },
-    { x: -0.70, y: 0.52, s: 22, r: 60, c: 'var(--lilac)' },
+    { x: -0.30, y: 0.30, s: 30, r: -30, c: 'var(--peach)' },
+    { x: -0.20, y: 0.80, s: 22, r: 60, c: 'var(--lilac)' },
     { x: 1.48, y: 0.18, s: 26, r: -50, c: 'var(--peach)' },
     { x: 1.40, y: 0.62, s: 30, r: 15, c: 'var(--lilac)' },
-    { x: 1.56, y: 0.86, s: 18, r: 80, c: 'var(--sun)' },
-    { x: -0.30, y: 0.98, s: 16, r: -70, c: 'var(--sun)' }
+    { x: 1.22, y: 1.02, s: 18, r: 80, c: 'var(--sun)' },
+    { x: 0.10, y: 1.06, s: 16, r: -70, c: 'var(--sun)' }
   ];
 
   function startLeaves() {
