@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- ===== SEO ===== -->
+  <title>Stefani Rafaeli Zopellaro | Nutricionista · Nutrição que compreende</title>
+  <meta name="description" content="Nutricionista com atendimento individualizado para mulheres e homens, com foco na saúde da mulher e olhar sensível à neurodivergência. Consultas particulares e vagas em valor social.">
+  <meta name="author" content="Stefani Rafaeli Zopellaro">
+  <meta name="theme-color" content="#175339">
+  <!-- TROCAR pelo domínio real (canonical, Open Graph e JSON-LD) -->
+  <link rel="canonical" href="https://www.SEUDOMINIO.com.br/">
+
+  <!-- Open Graph (pré-visualização no WhatsApp / Instagram) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Stefani Rafaeli Zopellaro | Nutrição que compreende">
+  <meta property="og:description" content="Nutrição humana, acolhedora e sensível à individualidade. Para mulheres e homens, com vagas em valor social.">
+  <!-- Imagem de compartilhamento 1200x630 (já gerada a partir do logo) -->
+  <meta property="og:image" content="https://www.SEUDOMINIO.com.br/assets/og-image.jpg">
+
+  <!-- ===== FAVICON =====
+       Gerados a partir do monograma do logo. Para trocar, substitua os arquivos em ./assets/ -->
+  <link rel="icon" href="./assets/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="./assets/favicon-512.png" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+
+  <!-- ===== Fontes =====
+       Fraunces (eixo SOFT) conversa com as serifas suaves do logo; Instrument Sans no texto corrido. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="preload" href="./assets/monograma-verde.png" as="image">
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <!-- Dados estruturados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Stefani Rafaeli Zopellaro",
+    "jobTitle": "Nutricionista",
+    "description": "Nutricionista com foco na saúde da mulher, atendimento também para homens e sensibilidade à experiência alimentar de pessoas neurodivergentes. Oferece vagas de atendimento em valor social.",
+    "image": "https://www.SEUDOMINIO.com.br/assets/og-image.jpg",
+    "url": "https://www.SEUDOMINIO.com.br/"
+  }
+  </script>
+</head>
+
+<body class="is-loading">
+
+  <!-- ============ PRELOADER ============
+       Dura exatamente 3 segundos (constante PRELOADER_MS em js/main.js).
+       O monograma "se desenha" de baixo para cima, as palavras da frase aparecem
+       e o anel completa 0→100%. Depois a cortina sobe. -->
+  <div class="preloader" id="preloader" role="status" aria-live="polite">
+    <div class="preloader__stage">
+      <svg class="preloader__ring" viewBox="0 0 120 120" aria-hidden="true">
+        <circle cx="60" cy="60" r="56" />
+        <circle class="preloader__ring-fill" cx="60" cy="60" r="56" />
+      </svg>
+      <img class="preloader__mark" src="./assets/monograma-verde.png" alt="" width="272" height="366">
+    </div>
+    <p class="preloader__words" aria-hidden="true">
+      <span>nutrição</span> <span>que</span> <em>compreende</em>
+    </p>
+    <span class="preloader__count" id="preloader-count" aria-hidden="true">0%</span>
+    <span class="sr-only">Carregando o site de Stefani Rafaeli Zopellaro</span>
+  </div>
+
+  <a class="skip" href="#manifesto">Ir para o conteúdo</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <a class="brand" href="#inicio" aria-label="Stefani Rafaeli Zopellaro, voltar ao início">
+      <!-- ===== LOGO =====
+           O logo completo fica na RAIZ do projeto: ./logo.png (versão verde, fundo transparente).
+           No header usamos só o monograma (./assets/monograma-verde.png) + o nome em texto,
+           porque o logo vertical é alto demais para a barra. Para usar um logo horizontal
+           oficial, troque o src abaixo e apague o <span class="brand__name">. -->
+      <img src="./assets/monograma-verde.png" alt="Monograma S com folha, logo de Stefani Zopellaro" class="brand__mark" width="272" height="366">
+      <span class="brand__name">Stefani <em>Zopellaro</em></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#abordagem">Abordagem</a>
+      <a href="#quem">Quem eu atendo</a>
+      <a href="#valor-social">Valor social</a>
+      <a href="#consulta">A consulta</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#contato" class="nav__cta">Agendar conversa</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============
+         Composição em tríptico: título largo no topo, foto em arco no centro,
+         texto à esquerda e identificação à direita. Folhinhas (a mesma folha do logo)
+         flutuam em volta da foto e reagem ao mouse/toque (js/main.js · "Folhas"). -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__leaves" id="leaves" aria-hidden="true"></div>
+
+      <div class="canopy canopy--hero" aria-hidden="true"></div>
+
+      <p class="eyebrow hero__eyebrow reveal">Nutrição humana · conexão · natureza</p>
+
+      <h1 class="hero__title" id="hero-title">
+        <span class="line reveal">Nutrição que</span>
+        <span class="line line--em reveal"><em>compreende.</em></span>
+      </h1>
+
+      <!-- ===== FOTO 1 · HERO =====
+           Arquivo: ./assets/hero.jpg  (retrato VERTICAL, proporção 3:4, mínimo 1200x1600px)
+           O recorte em arco é aplicado pelo CSS. Prefira luz natural, fundo limpo e
+           expressão espontânea. Enquanto o arquivo não existir, aparece o placeholder. -->
+      <figure class="hero__photo reveal">
+        <div class="photo-slot" role="img" aria-label="Espaço reservado para a foto principal de Stefani Rafaeli Zopellaro">
+          <img src="./assets/monograma-verde.png" alt="" class="photo-slot__mark">
+          <span>Foto principal<small>assets/hero.jpg · 3:4</small></span>
+        </div>
+        <img src="./assets/hero.jpg" alt="Stefani Rafaeli Zopellaro, nutricionista, sorrindo, com cabelos ruivos ondulados e blusa vinho, em casa com plantas ao fundo" width="1073" height="1430" fetchpriority="high"
+             onerror="this.remove()">
+        <!-- Galhos com folhas e lavanda: desenhados pelo JS (js/main.js · "Botânica") -->
+        <svg class="botany botany--hero" id="botany-hero" viewBox="0 0 400 533" aria-hidden="true"></svg>
+        <svg class="hero__badge" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="circ" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+          <text><textPath href="#circ" textLength="462" lengthAdjust="spacing">escuta · autonomia · acolhimento · individualidade ·</textPath></text>
+        </svg>
+        <img class="hero__badge-mark" src="./assets/monograma-verde.png" alt="" aria-hidden="true">
+      </figure>
+
+      <div class="hero__left reveal">
+        <p class="hero__lede">
+          Um cuidado que começa pela sua história: rotina, emoções, sentidos e o jeito único como a comida entra na sua vida.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contato">Quero conversar</a>
+          <a class="btn btn--ghost" href="#abordagem">Como eu cuido</a>
+        </div>
+      </div>
+
+      <div class="hero__right reveal">
+        <p class="hero__id">
+          <strong>Stefani Rafaeli Zopellaro</strong>
+          <!-- PREENCHER: região e número do CRN (aparece também no Sobre e no rodapé) -->
+          <span>Nutricionista · CRN-X 00000</span>
+        </p>
+        <ul class="hero__tags" aria-label="Formas de atendimento">
+          <li class="tag--lilac">Mulheres <i aria-hidden="true">&amp;</i> homens</li>
+          <li><a href="#valor-social">Vagas em valor social <span aria-hidden="true">↘</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ MANIFESTO ============ -->
+    <section class="manifesto" id="manifesto" aria-label="Manifesto">
+      <p class="manifesto__text reveal">
+        Comida não é só <mark>nutriente</mark>. É memória, textura, cheiro, cansaço, <mark>afeto</mark>, rotina e, às vezes, também <mark>desafio</mark>. Um plano que ignora tudo isso raramente cabe na vida real.
+      </p>
+      <!-- Dois galhos que crescem um em direção ao outro: a conexão entre quem cuida e quem é cuidado -->
+      <div class="connect" aria-hidden="true">
+        <svg class="botany botany--connect" id="botany-connect" viewBox="0 0 1000 170"></svg>
+      </div>
+      <p class="manifesto__note reveal">
+        Cuidado nutricional é, antes de tudo, <strong>conexão humana</strong>: duas pessoas, uma conversa honesta e um caminho possível. Aqui ninguém é avaliado pela capacidade de seguir regras.
+      </p>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="about" id="sobre" aria-labelledby="about-title">
+      <div class="about__panel">
+        <div class="canopy canopy--about" aria-hidden="true"></div>
+        <svg class="botany botany--about" id="botany-about" viewBox="0 0 320 320" aria-hidden="true"></svg>
+
+        <div class="about__media reveal">
+          <!-- ===== FOTO 2 · SOBRE MIM =====
+               Arquivo: ./assets/sobre.jpg (proporção 4:5, mínimo 1000x1250px).
+               Sugestão: em atendimento, na cozinha ou num momento espontâneo,
+               algo que mostre quem você é fora da pose. -->
+          <div class="about__frame">
+            <div class="photo-slot photo-slot--dark" role="img" aria-label="Espaço reservado para a foto da seção Sobre mim">
+              <img src="./assets/monograma-peach.png" alt="" class="photo-slot__mark">
+              <span>Foto sobre mim<small>assets/sobre.jpg · 4:5</small></span>
+            </div>
+            <img src="./assets/sobre.jpg" alt="Retrato de Stefani Rafaeli Zopellaro sorrindo, de blusa vinho, em fundo claro" width="1086" height="1357" loading="lazy"
+                 onerror="this.remove()">
+          </div>
+          <p class="about__sign" aria-hidden="true">“Ser diferente é uma arte.”</p>
+        </div>
+
+        <div class="about__content">
+          <p class="eyebrow eyebrow--peach reveal">Sobre mim</p>
+          <h2 id="about-title" class="reveal">Olá, eu sou a <em>Stefani</em>.</h2>
+          <p class="reveal">
+            Sou nutricionista e acredito que a alimentação só faz sentido quando conversa com a vida de quem come. O centro do meu trabalho é a saúde da mulher, em diferentes fases e momentos, e atendo homens com o mesmo cuidado e a mesma escuta.
+          </p>
+          <p class="reveal">
+            Tenho um olhar especial para a experiência alimentar de pessoas neurodivergentes: seletividade, hiperfoco, rotinas rígidas, sensibilidade a texturas e cheiros. Esse conhecimento aprofunda a minha prática, mas não limita quem eu atendo.
+          </p>
+          <dl class="about__facts reveal">
+            <!-- PREENCHER: instituição de formação, CRN e modalidade/cidade -->
+            <div><dt>Formação</dt><dd>Nutrição · Instituição</dd></div>
+            <div><dt>Registro</dt><dd>CRN-X 00000</dd></div>
+            <div><dt>Atendimento</dt><dd>Online e presencial · Cidade/UF</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABORDAGEM ============
+         Título fixo (sticky) à esquerda, ideias rolando à direita no desktop. -->
+    <section class="approach" id="abordagem" aria-labelledby="approach-title">
+      <header class="approach__head">
+        <p class="eyebrow reveal">Como eu cuido</p>
+        <h2 id="approach-title" class="reveal">Quatro ideias que guiam cada atendimento.</h2>
+        <p class="approach__aside reveal">Nenhuma delas é uma regra para você seguir. São compromissos meus.</p>
+      </header>
+
+      <ol class="approach__list">
+        <li class="approach__item reveal">
+          <span class="approach__num" aria-hidden="true">01</span>
+          <h3>Escuta antes de conduta</h3>
+          <p>A primeira consulta é uma conversa de verdade. Quero entender seu dia, sua história e o que a comida representa para você antes de propor qualquer coisa.</p>
+        </li>
+        <li class="approach__item reveal">
+          <span class="approach__num" aria-hidden="true">02</span>
+          <h3>A individualidade como ponto de partida</h3>
+          <p>Gosto, textura, horário, orçamento, energia disponível. Cada detalhe entra no cuidado, porque ninguém come no vácuo.</p>
+        </li>
+        <li class="approach__item reveal">
+          <span class="approach__num" aria-hidden="true">03</span>
+          <h3>Autonomia, não obediência</h3>
+          <p>Você participa das decisões. A ideia é construir repertório e confiança para escolher, sem depender de regras que não cabem na sua semana.</p>
+        </li>
+        <li class="approach__item reveal">
+          <span class="approach__num" aria-hidden="true">04</span>
+          <h3>Ciência sem culpa</h3>
+          <p>O cuidado é baseado em evidências, explicado em linguagem simples e livre de discursos de restrição, perfeição ou culpa.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ QUEM EU ATENDO ============ -->
+    <section class="who" id="quem" aria-labelledby="who-title">
+      <header class="who__head">
+        <p class="eyebrow reveal">Quem eu atendo</p>
+        <h2 id="who-title" class="reveal">Meu foco é a saúde da mulher. <em>A porta está aberta para todos.</em></h2>
+      </header>
+
+      <div class="who__people">
+        <article class="person person--women reveal">
+          <span class="person__icon" aria-hidden="true">♀</span>
+          <h3>Mulheres</h3>
+          <p>Em todas as fases da vida: ciclo menstrual, saúde hormonal, gestação, pós-parto, climatério e as rotinas que mudam com cada uma delas.</p>
+        </article>
+        <span class="who__amp" aria-hidden="true">&amp;</span>
+        <article class="person person--men reveal">
+          <span class="person__icon" aria-hidden="true">♂</span>
+          <h3>Homens</h3>
+          <p>Com a mesma escuta e o mesmo plano individualizado. Rotina, saúde, relação com a comida: o cuidado começa pelo que é importante para você.</p>
+        </article>
+      </div>
+
+      <div class="who__bottom">
+        <div class="who__chips-wrap">
+          <p class="who__lead reveal">Talvez você se reconheça em alguma destas situações:</p>
+          <ul class="chips reveal" aria-label="Situações em que o acompanhamento pode ajudar">
+            <li>Quero melhorar minha relação com a comida</li>
+            <li>Muita informação, pouca clareza</li>
+            <li>Rotina corrida e pouco tempo para cozinhar</li>
+            <li>Já tentei várias dietas e me frustrei</li>
+            <li>Alimentação e saúde hormonal</li>
+            <li>Seletividade alimentar</li>
+            <li>Sensibilidade a texturas e cheiros</li>
+            <li>Quero comer melhor sem rigidez</li>
+          </ul>
+        </div>
+
+        <aside class="neuro reveal" aria-labelledby="neuro-title">
+          <span class="neuro__tag">Um diferencial</span>
+          <h3 id="neuro-title">Nutrição sensível à neurodivergência</h3>
+          <p>
+            Para pessoas com TEA, TDAH e outras formas de funcionamento neurológico, comer pode envolver sensorialidade, funções executivas e rotinas próprias. Adapto o cuidado a essa realidade, com respeito e sem rótulos. Não é preciso ter diagnóstico.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ VALOR SOCIAL ============
+         Deixa claro: existe atendimento em valor social (mais acessível), para mulheres e homens,
+         com o mesmo cuidado. Sem números e sem linguagem de promoção (regra do CFN):
+         os valores são passados individualmente pelo WhatsApp. -->
+    <section class="social" id="valor-social" aria-labelledby="social-title">
+      <div class="social__intro">
+        <p class="eyebrow reveal">Atendimento em valor social</p>
+        <h2 id="social-title" class="reveal">Cuidado nutricional também precisa <em>caber no bolso.</em></h2>
+        <p class="reveal">
+          Todo mês eu reservo vagas de atendimento com valor social: um valor reduzido para quem hoje não consegue pagar uma consulta particular. Vale para mulheres e para homens.
+        </p>
+      </div>
+
+      <div class="social__tickets">
+        <article class="ticket reveal">
+          <p class="ticket__kind">Atendimento particular</p>
+          <h3>Consulta individual</h3>
+          <ul>
+            <li>Consulta inicial sem pressa, com tempo de escuta</li>
+            <li>Plano construído com você</li>
+            <li>Retornos de acompanhamento</li>
+          </ul>
+          <p class="ticket__for">Para mulheres e homens</p>
+        </article>
+
+        <article class="ticket ticket--social reveal">
+          <p class="ticket__kind">Valor social <span>valor reduzido</span></p>
+          <h3>O mesmo cuidado, com valor acessível</h3>
+          <ul>
+            <li>A mesma consulta, a mesma escuta e o mesmo plano individualizado</li>
+            <li>Para quem está com a renda apertada neste momento</li>
+            <li>Número de vagas mensal limitado, com lista de espera quando preenchidas</li>
+          </ul>
+          <p class="ticket__for">Para mulheres e homens</p>
+          <button type="button" class="btn btn--primary" data-tipo="social">Perguntar sobre o valor social</button>
+        </article>
+      </div>
+
+      <p class="social__promise reveal">
+        <strong>O que muda é só o valor.</strong> O tempo, a atenção e a qualidade do atendimento são exatamente os mesmos.
+      </p>
+      <p class="social__note reveal">
+        Os valores são informados individualmente pelo WhatsApp. O valor social não é promoção nem condição por tempo limitado: é um compromisso permanente com o acesso à nutrição.
+      </p>
+    </section>
+
+    <!-- ============ A CONSULTA ============
+         Passos ligados por uma linha curva que se desenha conforme a rolagem. -->
+    <section class="journey" id="consulta" aria-labelledby="journey-title">
+      <header class="journey__head">
+        <p class="eyebrow reveal">A consulta</p>
+        <h2 id="journey-title" class="reveal">Como funciona, na prática.</h2>
+      </header>
+
+      <div class="journey__track">
+        <svg class="journey__line" aria-hidden="true">
+          <!-- o traçado é calculado no JS passando pelo centro de cada círculo -->
+          <path id="journey-path" d=""/>
+        </svg>
+
+        <ol class="journey__steps">
+          <li class="step reveal">
+            <span class="step__n">1</span>
+            <h3>Primeiro contato</h3>
+            <p>Você me chama pelo WhatsApp e conversamos sobre o que procura e qual formato faz mais sentido, particular ou valor social.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__n">2</span>
+            <h3>Consulta inicial</h3>
+            <p>Um encontro sem pressa para conhecer sua história, rotina, preferências e queixas.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__n">3</span>
+            <h3>Plano feito para você</h3>
+            <p>Orientações pensadas para a sua realidade, com linguagem clara e espaço para ajustes.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__n">4</span>
+            <h3>Acompanhamento</h3>
+            <p>Retornos para ajustar o caminho junto com você, no seu ritmo.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ RELATOS ============
+         ATENÇÃO (CFN): os textos abaixo são MODELOS. Substitua por relatos reais, com autorização
+         por escrito, falando apenas do acolhimento e do atendimento. Nada de peso, medidas,
+         fotos de antes e depois ou promessas. Se ainda não tiver relatos, adicione o atributo
+         "hidden" na <section> abaixo para ocultá-la. -->
+    <section class="voices" id="relatos" aria-labelledby="voices-title">
+      <h2 id="voices-title" class="eyebrow reveal">Sobre o atendimento</h2>
+      <blockquote class="voices__main reveal">
+        <p>“Pela primeira vez eu me senti ouvida numa consulta de nutrição, sem julgamento.”</p>
+        <footer>Paciente · iniciais autorizadas</footer>
+      </blockquote>
+      <div class="voices__side">
+        <blockquote class="reveal">
+          <p>“Ela respeitou o meu tempo e as minhas dificuldades com certos alimentos.”</p>
+          <footer>Paciente</footer>
+        </blockquote>
+        <blockquote class="reveal">
+          <p>“Linguagem leve, explicações claras e muita atenção a cada detalhe.”</p>
+          <footer>Paciente</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ DÚVIDAS ============ -->
+    <section class="faq" id="duvidas" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="reveal">Dúvidas <em>frequentes</em></h2>
+      <div class="faq__list">
+        <details class="reveal">
+          <summary>Homens também podem ser atendidos?</summary>
+          <p>Sim. O foco do meu trabalho é a saúde da mulher, mas atendo homens com a mesma escuta, o mesmo tempo de consulta e o mesmo plano individualizado. Isso vale tanto para o atendimento particular quanto para o valor social.</p>
+        </details>
+        <details class="reveal">
+          <summary>Como funciona o atendimento em valor social?</summary>
+          <p>É uma consulta com valor reduzido para quem não consegue pagar o atendimento particular neste momento. Você me chama pelo WhatsApp, conversamos de forma simples e respeitosa sobre a sua situação e, havendo vaga no mês, agendamos. Quando as vagas estão preenchidas, você entra na lista de espera.</p>
+        </details>
+        <details class="reveal">
+          <summary>O atendimento em valor social é diferente do particular?</summary>
+          <p>Não. O tempo de escuta, a qualidade e o acompanhamento são os mesmos. A única diferença é o valor.</p>
+        </details>
+        <details class="reveal">
+          <summary>Preciso ter diagnóstico de neurodivergência para ser atendido(a)?</summary>
+          <p>Não. Se você tem diagnóstico, suspeita ou só percebe que a sua relação sensorial com a comida é diferente, esse olhar entra no cuidado, sem rótulos.</p>
+        </details>
+        <details class="reveal">
+          <summary>Vou receber uma dieta pronta, cheia de restrições?</summary>
+          <p>O cuidado é construído a partir da sua realidade e dos seus objetivos de saúde. O foco está na orientação individualizada, não em regras genéricas.</p>
+        </details>
+        <details class="reveal">
+          <summary>O atendimento é online ou presencial?</summary>
+          <!-- AJUSTAR conforme a realidade da Stefani -->
+          <p>Atendo online, para qualquer cidade, e presencialmente em Cidade/UF. Os detalhes de horário e valores são combinados pelo WhatsApp.</p>
+        </details>
+        <details class="reveal">
+          <summary>A nutricionista garante resultados?</summary>
+          <p>Não. Cada pessoa responde de um jeito, e a ética profissional não permite promessas de resultado. O que eu garanto é um cuidado atento, individualizado e baseado em ciência.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="contact" id="contato" aria-labelledby="contact-title">
+      <div class="contact__panel">
+        <div class="contact__text">
+          <p class="eyebrow eyebrow--peach reveal">Vamos conversar?</p>
+          <h2 id="contact-title" class="reveal">Conte um pouco sobre o que você <em>procura.</em></h2>
+          <p class="reveal">Ao enviar, o WhatsApp abre com a sua mensagem pronta. Respondo assim que possível, em horário comercial.</p>
+          <img class="contact__mark" src="./assets/monograma-peach.png" alt="" aria-hidden="true">
+        </div>
+        <div class="canopy canopy--contact" aria-hidden="true"></div>
+        <svg class="botany botany--contact" id="botany-contact" viewBox="0 0 320 320" aria-hidden="true"></svg>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <label for="nome">Nome
+            <input type="text" id="nome" name="nome" autocomplete="name" required placeholder="Como posso te chamar?">
+          </label>
+          <label for="whatsapp">WhatsApp
+            <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" required placeholder="(00) 00000-0000">
+          </label>
+          <label for="objetivo">Qual o objetivo da consulta?
+            <textarea id="objetivo" name="objetivo" rows="3" required placeholder="Em poucas palavras"></textarea>
+          </label>
+          <fieldset class="form__tipo">
+            <legend>Tipo de atendimento</legend>
+            <label><input type="radio" name="tipo" value="Particular" checked> <span>Particular</span></label>
+            <label><input type="radio" name="tipo" value="Valor social"> <span>Valor social</span></label>
+          </fieldset>
+          <p class="form__error" id="form-error" role="alert" hidden></p>
+          <button type="submit" class="btn btn--peach">Continuar no WhatsApp</button>
+          <small>Seus dados são usados apenas para este contato.</small>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <!-- Logo completo (./logo.png, versão verde com fundo transparente, na raiz do projeto) -->
+    <img class="footer__logo" src="./logo.png" alt="Logo de Stefani Rafaeli Zopellaro, nutricionista" width="593" height="780" loading="lazy">
+    <div class="footer__id">
+      <p class="footer__name">Stefani Rafaeli Zopellaro</p>
+      <!-- PREENCHER: região e número do CRN -->
+      <p>Nutricionista · CRN-X 00000</p>
+      <p>Atendimento para mulheres e homens · particular e valor social</p>
+    </div>
+    <nav class="footer__links" aria-label="Links do rodapé">
+      <a href="#sobre">Sobre</a>
+      <a href="#valor-social">Valor social</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#contato">Contato</a>
+      <!-- TROCAR pelo @ real -->
+      <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <p class="footer__legal">
+      As informações deste site têm caráter educativo e não substituem uma consulta individual. Cada pessoa responde de forma diferente e não há promessa de resultado. Conteúdo elaborado de acordo com o Código de Ética e Conduta do Nutricionista e as normas de publicidade do CFN.
+    </p>
+    <p class="footer__copy">© <span id="year">2026</span> Stefani Rafaeli Zopellaro. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
