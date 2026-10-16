@@ -27,7 +27,7 @@ Enquanto as fotos não existirem, aparecem placeholders sinalizados no lugar.
 
 ## Pendências antes de publicar
 
-1. **CRN**: procure `CRN-X 00000` no `index.html` (hero, sobre e rodapé).
+1. ~~CRN~~: já preenchido (CRN-8 11639: hero, sobre e rodapé).
 2. **WhatsApp**: `WHATSAPP_NUMBER` em `js/main.js` (ex.: `5511999999999`). Todos os botões com `data-wa` (11 pela página + o flutuante) usam esse número, cada um com sua mensagem pronta.
 3. **Fotos**: `assets/hero.jpg` e `assets/sobre.jpg`.
 4. **Domínio**: troque `https://www.SEUDOMINIO.com.br/` (canonical, Open Graph e JSON-LD) e o Instagram no rodapé.
