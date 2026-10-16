@@ -28,10 +28,10 @@ Enquanto as fotos não existirem, aparecem placeholders sinalizados no lugar.
 ## Pendências antes de publicar
 
 1. ~~CRN~~: já preenchido (CRN-8 11639: hero, sobre e rodapé).
-2. **WhatsApp**: `WHATSAPP_NUMBER` em `js/main.js` (ex.: `5511999999999`). Todos os botões com `data-wa` (11 pela página + o flutuante) usam esse número, cada um com sua mensagem pronta.
+2. ~~WhatsApp~~: preenchido (`554598384874` em `js/main.js`). Todos os botões com `data-wa` (11 pela página + o flutuante) usam esse número, cada um com sua mensagem pronta.
 3. **Fotos**: `assets/hero.jpg` e `assets/sobre.jpg`.
 4. **Domínio**: troque `https://www.SEUDOMINIO.com.br/` (canonical, Open Graph e JSON-LD) e o Instagram no rodapé.
-5. **Sobre**: instituição de formação (endereço já definido: Centro, Cascavel - PR).
+5. ~~Sobre~~: formação (Centro Universitário FAG) e endereço (Centro, Cascavel - PR) preenchidos.
 6. **Valor social**: confirmar critério (como a pessoa solicita) e se há lista de espera; o texto está na seção `#valor-social` e no FAQ.
 7. **Relatos**: os textos são modelos. Use só relatos reais, autorizados por escrito, sobre acolhimento e atendimento. Para ocultar: `hidden` na `<section class="voices">`.
 

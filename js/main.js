@@ -8,7 +8,7 @@
   /* ---------- CONFIGURAÇÃO ----------
      WhatsApp da profissional: código do país + DDD + número, só dígitos.
      Exemplo: 5511999999999 */
-  var WHATSAPP_NUMBER = '5500000000000';
+  var WHATSAPP_NUMBER = '554598384874';
 
   /* Duração do preloader: exatamente 3 segundos. */
   var PRELOADER_MS = 3000;
