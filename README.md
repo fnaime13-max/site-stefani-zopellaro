@@ -31,7 +31,7 @@ Enquanto as fotos não existirem, aparecem placeholders sinalizados no lugar.
 2. **WhatsApp**: `WHATSAPP_NUMBER` em `js/main.js` (ex.: `5511999999999`). Todos os botões com `data-wa` (11 pela página + o flutuante) usam esse número, cada um com sua mensagem pronta.
 3. **Fotos**: `assets/hero.jpg` e `assets/sobre.jpg`.
 4. **Domínio**: troque `https://www.SEUDOMINIO.com.br/` (canonical, Open Graph e JSON-LD) e o Instagram no rodapé.
-5. **Sobre / FAQ**: instituição de formação, cidade/UF e modalidade (online/presencial).
+5. **Sobre**: instituição de formação (endereço já definido: Centro, Cascavel - PR).
 6. **Valor social**: confirmar critério (como a pessoa solicita) e se há lista de espera; o texto está na seção `#valor-social` e no FAQ.
 7. **Relatos**: os textos são modelos. Use só relatos reais, autorizados por escrito, sobre acolhimento e atendimento. Para ocultar: `hidden` na `<section class="voices">`.
 
