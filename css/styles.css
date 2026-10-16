@@ -800,6 +800,14 @@ body.menu-open .header { background: transparent; box-shadow: none; -webkit-back
   font-variation-settings: "SOFT" 80, "opsz" 72; letter-spacing: -.01em;
 }
 .voices footer { font-size: .85rem; letter-spacing: .08em; color: var(--ink-soft); }
+.stars { display: flex; gap: .3rem; margin-bottom: 1.2rem; }
+.stars svg { width: 26px; height: 26px; fill: #F4B400; }
+.google-badge {
+  display: inline-flex; align-items: center; gap: .55rem;
+  padding: .55rem 1rem; border-radius: 999px; background: var(--paper); border: 1px solid var(--line);
+  font-weight: 600; letter-spacing: .02em; color: var(--ink); text-decoration: none;
+}
+.google-badge svg { width: 18px; height: 18px; }
 .voices__side { display: grid; gap: 1rem; }
 .voices__side blockquote {
   padding: 1.6rem 1.6rem 1.3rem; border-radius: var(--radius); background: var(--lilac-50);
@@ -967,3 +975,8 @@ body.menu-open .wa-fab { opacity: 0; pointer-events: none; }
   .wa-fab { padding: 0 22px 0 18px; right: 1.6rem; bottom: 1.6rem; }
   .wa-fab span { display: inline; }
 }
+
+/* com só o depoimento real, a seção vira uma coluna centralizada */
+.voices__side[hidden] { display: none; }
+.voices:has(.voices__side[hidden]) { grid-template-columns: 1fr; max-width: 900px; text-align: center; }
+.voices:has(.voices__side[hidden]) .stars { justify-content: center; }
