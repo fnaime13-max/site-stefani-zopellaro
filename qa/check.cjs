@@ -7,16 +7,14 @@ const url = require('url').pathToFileURL(path.resolve(__dirname, '../index.html'
     const p = await b.newPage({ viewport: { width: w, height: h } });
     const errs=[]; p.on('pageerror', e => errs.push(e.message));
     await p.goto(url); await p.waitForTimeout(4600);
+    const wa = await p.evaluate(() => [...document.querySelectorAll('[data-wa]')].map(a => a.href.startsWith('https://wa.me/') && a.target === '_blank'));
+    const fab = await p.evaluate(() => { const r = document.querySelector('.wa-fab').getBoundingClientRect(); return r.bottom <= innerHeight && r.top > 0; });
+    const [popup] = await Promise.all([p.waitForEvent('popup', { timeout: 3000 }).catch(() => null), p.click('.wa-fab')]);
+    console.log(w, 'links WA:', wa.length, 'ok:', wa.every(Boolean), 'fab visível:', fab, 'abre:', popup ? popup.url().slice(0, 60) : 'não', errs.join('|') || 'sem erros');
+    if (popup) await popup.close();
     await p.screenshot({ path: path.join(__dirname, `c-hero-${w}.png`) });
-    await p.evaluate(() => document.querySelector('#consulta').scrollIntoView()); await p.waitForTimeout(400);
-    await p.mouse.wheel(0, 200); await p.waitForTimeout(600);
-    await p.screenshot({ path: path.join(__dirname, `c-journey-${w}.png`) });
-    // botão valor social -> marca rádio
-    await p.evaluate(() => document.querySelector('#valor-social').scrollIntoView());
-    await p.click('[data-tipo="social"]'); await p.waitForTimeout(1200);
-    const r = await p.evaluate(() => document.querySelector('input[name=tipo]:checked').value);
-    if (w===390){ await p.click('#burger'); await p.waitForTimeout(800); await p.screenshot({ path: path.join(__dirname, `c-menu-${w}.png`) }); }
-    console.log(w, 'tipo:', r, errs.join('|')||'ok');
+    await p.evaluate(() => document.querySelector('#valor-social').scrollIntoView()); await p.waitForTimeout(900);
+    await p.screenshot({ path: path.join(__dirname, `c-social-${w}.png`) });
   }
   await b.close();
 })();

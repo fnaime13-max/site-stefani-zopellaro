@@ -81,8 +81,8 @@
   var burger = document.getElementById('burger');
   var nav = document.getElementById('nav');
   var brandMark = document.querySelector('.brand__mark');
-  var MARK_GREEN = './assets/monograma-verde.png';
-  var MARK_PEACH = './assets/monograma-peach.png';
+  var MARK_GREEN = './assets/monograma.png';
+  var MARK_PEACH = './assets/monograma-claro.png';
 
   function setMenu(open) {
     nav.classList.toggle('is-open', open);
@@ -118,6 +118,7 @@
   }
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener('click', function (e) {
+      if (link.hasAttribute('data-wa')) return; /* links do WhatsApp seguem normalmente */
       var id = link.getAttribute('href');
       if (id.length < 2 || !document.querySelector(id)) return;
       e.preventDefault();
@@ -497,6 +498,15 @@
       window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
     });
   }
+
+  /* ---------- Links diretos para o WhatsApp ----------
+     Todo elemento com data-wa="mensagem" vira um link do WhatsApp com o texto pronto.
+     Sem JavaScript, ele leva ao formulário (#contato). */
+  document.querySelectorAll('[data-wa]').forEach(function (el) {
+    el.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(el.getAttribute('data-wa'));
+    el.target = '_blank';
+    el.rel = 'noopener';
+  });
 
   /* ---------- Ano no rodapé ---------- */
   var year = document.getElementById('year');

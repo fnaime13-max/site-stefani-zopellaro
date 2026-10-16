@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="preload" href="./assets/monograma-verde.png" as="image">
+  <link rel="preload" href="./assets/monograma.png" as="image">
   <link rel="stylesheet" href="./css/styles.css">
 
   <!-- Dados estruturados -->
@@ -51,6 +51,11 @@
 
 <body class="is-loading">
 
+  <!-- Ícone do WhatsApp (reutilizado com <use href="#i-wa">) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41Z"/></symbol>
+  </svg>
+
   <!-- ============ PRELOADER ============
        Dura exatamente 3 segundos (constante PRELOADER_MS em js/main.js).
        O monograma "se desenha" de baixo para cima, as palavras da frase aparecem
@@ -61,7 +66,7 @@
         <circle cx="60" cy="60" r="56" />
         <circle class="preloader__ring-fill" cx="60" cy="60" r="56" />
       </svg>
-      <img class="preloader__mark" src="./assets/monograma-verde.png" alt="" width="272" height="366">
+      <img class="preloader__mark" src="./assets/monograma.png" alt="" width="607" height="598">
     </div>
     <p class="preloader__words" aria-hidden="true">
       <span>nutrição</span> <span>que</span> <em>compreende</em>
@@ -76,11 +81,11 @@
   <header class="header" id="header">
     <a class="brand" href="#inicio" aria-label="Stefani Rafaeli Zopellaro, voltar ao início">
       <!-- ===== LOGO =====
-           O logo completo fica na RAIZ do projeto: ./logo.png (versão verde, fundo transparente).
-           No header usamos só o monograma (./assets/monograma-verde.png) + o nome em texto,
+           O logo completo fica na RAIZ do projeto: ./logo.png (serpente botânica, fundo transparente;
+           original em ./_originais/). No header usamos só o monograma (./assets/monograma.png) + o nome em texto,
            porque o logo vertical é alto demais para a barra. Para usar um logo horizontal
            oficial, troque o src abaixo e apague o <span class="brand__name">. -->
-      <img src="./assets/monograma-verde.png" alt="Monograma S com folha, logo de Stefani Zopellaro" class="brand__mark" width="272" height="366">
+      <img src="./assets/monograma.png" alt="Monograma S de serpente com margarida e folhas, logo de Stefani Rafaeli Zopellaro" class="brand__mark" width="607" height="598">
       <span class="brand__name">Stefani Rafaeli Zopellaro</span>
     </a>
 
@@ -91,7 +96,7 @@
       <a href="#valor-social">Valor social</a>
       <a href="#consulta">A consulta</a>
       <a href="#duvidas">Dúvidas</a>
-      <a href="#contato" class="nav__cta">Agendar conversa</a>
+      <a href="#contato" class="nav__cta" data-wa="Olá, Stefani! Vim pelo site e gostaria de agendar uma consulta."><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Agendar no WhatsApp</a>
     </nav>
 
     <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
@@ -123,7 +128,7 @@
            expressão espontânea. Enquanto o arquivo não existir, aparece o placeholder. -->
       <figure class="hero__photo reveal">
         <div class="photo-slot" role="img" aria-label="Espaço reservado para a foto principal de Stefani Rafaeli Zopellaro">
-          <img src="./assets/monograma-verde.png" alt="" class="photo-slot__mark">
+          <img src="./assets/monograma.png" alt="" class="photo-slot__mark">
           <span>Foto principal<small>assets/hero.jpg · 3:4</small></span>
         </div>
         <img src="./assets/hero.jpg" alt="Stefani Rafaeli Zopellaro, nutricionista, sorrindo, com cabelos ruivos ondulados e blusa vinho, em casa com plantas ao fundo" width="1073" height="1430" fetchpriority="high"
@@ -134,7 +139,7 @@
           <defs><path id="circ" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
           <text><textPath href="#circ" textLength="462" lengthAdjust="spacing">escuta · autonomia · acolhimento · individualidade ·</textPath></text>
         </svg>
-        <img class="hero__badge-mark" src="./assets/monograma-verde.png" alt="" aria-hidden="true">
+        <img class="hero__badge-mark" src="./assets/monograma.png" alt="" aria-hidden="true">
       </figure>
 
       <div class="hero__left reveal">
@@ -143,22 +148,22 @@
           Comida não é só <mark>nutriente</mark>. É memória, textura, cheiro, cansaço, <mark>afeto</mark>, rotina e, às vezes, também <mark>desafio</mark>. Um plano que ignora tudo isso raramente cabe na vida real.
         </p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#contato">Quero conversar</a>
+          <a class="btn btn--primary btn--wa" href="#contato" data-wa="Olá, Stefani! Vim pelo site e gostaria de agendar uma consulta."><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Conversar no WhatsApp</a>
           <a class="btn btn--ghost" href="#abordagem">Como eu cuido</a>
+        </div>
+        <div class="hero__right">
+          <p class="hero__id">
+            <strong>Stefani Rafaeli Zopellaro</strong>
+            <!-- PREENCHER: região e número do CRN (aparece também no Sobre e no rodapé) -->
+            <span>Nutricionista · CRN-X 00000</span>
+          </p>
+          <ul class="hero__tags" aria-label="Formas de atendimento">
+            <li class="tag--lilac">Mulheres <i aria-hidden="true">&amp;</i> homens</li>
+            <li><a href="#valor-social">Vagas em valor social <span aria-hidden="true">↘</span></a></li>
+          </ul>
         </div>
       </div>
 
-      <div class="hero__right reveal">
-        <p class="hero__id">
-          <strong>Stefani Rafaeli Zopellaro</strong>
-          <!-- PREENCHER: região e número do CRN (aparece também no Sobre e no rodapé) -->
-          <span>Nutricionista · CRN-X 00000</span>
-        </p>
-        <ul class="hero__tags" aria-label="Formas de atendimento">
-          <li class="tag--lilac">Mulheres <i aria-hidden="true">&amp;</i> homens</li>
-          <li><a href="#valor-social">Vagas em valor social <span aria-hidden="true">↘</span></a></li>
-        </ul>
-      </div>
     </section>
 
     <!-- ============ MANIFESTO ============ -->
@@ -185,7 +190,7 @@
                algo que mostre quem você é fora da pose. -->
           <div class="about__frame">
             <div class="photo-slot photo-slot--dark" role="img" aria-label="Espaço reservado para a foto da seção Sobre mim">
-              <img src="./assets/monograma-peach.png" alt="" class="photo-slot__mark">
+              <img src="./assets/monograma-claro.png" alt="" class="photo-slot__mark">
               <span>Foto sobre mim<small>assets/sobre.jpg · 4:5</small></span>
             </div>
             <img src="./assets/sobre.jpg" alt="Retrato de Stefani Rafaeli Zopellaro sorrindo, de blusa vinho, em fundo claro" width="1086" height="1357" loading="lazy"
@@ -209,6 +214,7 @@
             <div><dt>Registro</dt><dd>CRN-X 00000</dd></div>
             <div><dt>Atendimento</dt><dd>Online e presencial · Cidade/UF</dd></div>
           </dl>
+          <div class="about__cta reveal"><a class="btn btn--peach btn--wa" href="#contato" data-wa="Olá, Stefani! Vim pelo site e gostaria de agendar uma consulta."><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Falar com a Stefani</a></div>
         </div>
       </div>
     </section>
@@ -220,6 +226,7 @@
         <p class="eyebrow reveal">Como eu cuido</p>
         <h2 id="approach-title" class="reveal">Quatro ideias que guiam cada atendimento.</h2>
         <p class="approach__aside reveal">Nenhuma delas é uma regra para você seguir. São compromissos meus.</p>
+        <div class="reveal"><a class="btn btn--primary btn--wa" href="#contato" data-wa="Olá, Stefani! Vim pelo site e gostaria de agendar uma consulta."><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Agendar minha consulta</a></div>
       </header>
 
       <ol class="approach__list">
@@ -288,6 +295,7 @@
           <p>
             Para pessoas com TEA, TDAH e outras formas de funcionamento neurológico, comer pode envolver sensorialidade, funções executivas e rotinas próprias. Adapto o cuidado a essa realidade, com respeito e sem rótulos. Não é preciso ter diagnóstico.
           </p>
+          <a class="neuro__link" href="#contato" data-wa="Olá, Stefani! Vim pelo site e gostaria de conversar sobre alimentação e neurodivergência."><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Conversar sobre isso</a>
         </aside>
       </div>
     </section>
@@ -315,6 +323,7 @@
             <li>Retornos de acompanhamento</li>
           </ul>
           <p class="ticket__for">Para mulheres e homens</p>
+          <a class="btn btn--primary btn--wa" href="#contato" data-wa="Olá, Stefani! Vim pelo site e gostaria de agendar uma consulta particular."><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta particular</a>
         </article>
 
         <article class="ticket ticket--social reveal">
@@ -326,7 +335,7 @@
             <li>Número de vagas mensal limitado, com lista de espera quando preenchidas</li>
           </ul>
           <p class="ticket__for">Para mulheres e homens</p>
-          <button type="button" class="btn btn--primary" data-tipo="social">Perguntar sobre o valor social</button>
+<a class="btn btn--primary btn--wa" href="#contato" data-wa="Olá, Stefani! Vim pelo site e gostaria de saber sobre o atendimento em valor social."><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Perguntar sobre o valor social</a>
         </article>
       </div>
 
@@ -374,6 +383,10 @@
             <p>Retornos para ajustar o caminho junto com você, no seu ritmo.</p>
           </li>
         </ol>
+      </div>
+      <div class="cta-row reveal">
+        <p>O primeiro passo é uma mensagem.</p>
+        <a class="btn btn--primary btn--wa" href="#contato" data-wa="Olá, Stefani! Vim pelo site e gostaria de agendar uma consulta."><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Dar o primeiro passo</a>
       </div>
     </section>
 
@@ -434,6 +447,10 @@
           <p>Não. Cada pessoa responde de um jeito, e a ética profissional não permite promessas de resultado. O que eu garanto é um cuidado atento, individualizado e baseado em ciência.</p>
         </details>
       </div>
+      <div class="cta-row reveal">
+        <p>Ficou alguma dúvida? Pode perguntar direto para mim.</p>
+        <a class="btn btn--ghost btn--wa" href="#contato" data-wa="Olá, Stefani! Vim pelo site e tenho uma dúvida sobre o atendimento."><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Perguntar no WhatsApp</a>
+      </div>
     </section>
 
     <!-- ============ CONTATO ============ -->
@@ -443,7 +460,8 @@
           <p class="eyebrow eyebrow--peach reveal">Vamos conversar?</p>
           <h2 id="contact-title" class="reveal">Conte um pouco sobre o que você <em>procura.</em></h2>
           <p class="reveal">Ao enviar, o WhatsApp abre com a sua mensagem pronta. Respondo assim que possível, em horário comercial.</p>
-          <img class="contact__mark" src="./assets/monograma-peach.png" alt="" aria-hidden="true">
+          <p class="contact__direct reveal">Prefere ir direto? <a href="#contato" data-wa="Olá, Stefani! Vim pelo site e gostaria de agendar uma consulta."><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Abrir o WhatsApp agora</a></p>
+          <img class="contact__mark" src="./assets/monograma-claro.png" alt="" aria-hidden="true">
         </div>
         <div class="canopy canopy--contact" aria-hidden="true"></div>
         <svg class="botany botany--contact" id="botany-contact" viewBox="0 0 320 320" aria-hidden="true"></svg>
@@ -474,8 +492,8 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <!-- Logo completo (./logo.png, versão verde com fundo transparente, na raiz do projeto) -->
-    <img class="footer__logo" src="./logo.png" alt="Logo de Stefani Rafaeli Zopellaro, nutricionista" width="593" height="780" loading="lazy">
+    <!-- Logo completo (./logo.png, fundo transparente, na raiz do projeto) -->
+    <img class="footer__logo" src="./logo.png" alt="Logo de Stefani Rafaeli Zopellaro, nutricionista: monograma S de serpente com margarida e folhas" width="844" height="1129" loading="lazy">
     <div class="footer__id">
       <p class="footer__name">Stefani Rafaeli Zopellaro</p>
       <!-- PREENCHER: região e número do CRN -->
@@ -495,6 +513,12 @@
     </p>
     <p class="footer__copy">© <span id="year">2026</span> Stefani Rafaeli Zopellaro. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Botão flutuante do WhatsApp (sempre visível depois da abertura) -->
+  <a class="wa-fab" href="#contato" data-wa="Olá, Stefani! Vim pelo site e gostaria de agendar uma consulta." aria-label="Conversar com a Stefani no WhatsApp">
+    <svg aria-hidden="true"><use href="#i-wa"/></svg>
+    <span>Fale comigo</span>
+  </a>
 
   <script src="./js/main.js"></script>
 </body>
