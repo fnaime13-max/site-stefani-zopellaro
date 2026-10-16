@@ -32,12 +32,12 @@ Enquanto as fotos não existirem, aparecem placeholders sinalizados no lugar.
 3. **Fotos**: `assets/hero.jpg` e `assets/sobre.jpg`.
 4. **Domínio**: troque `https://www.SEUDOMINIO.com.br/` (canonical, Open Graph e JSON-LD) e o Instagram no rodapé.
 5. ~~Sobre~~: formação (Centro Universitário FAG) e endereço (Centro, Cascavel - PR) preenchidos.
-6. **Valor social**: confirmar critério (como a pessoa solicita) e se há lista de espera; o texto está na seção `#valor-social` e no FAQ.
+6. **Seu acompanhamento** (`#acompanhamento`): substituiu o antigo "valor social", vedado pelo CFN. Fala em cuidado adaptado à realidade de cada pessoa e conversa reservada pelo WhatsApp, sem preço nem desconto.
 7. **Relatos**: os textos são modelos. Use só relatos reais, autorizados por escrito, sobre acolhimento e atendimento. Para ocultar: `hidden` na `<section class="voices">`.
 
 ## Conformidade (CFN)
 
-Sem "antes e depois", sem promessas de resultado e sem preço como chamariz. O valor social aparece **sem números** e explicitamente "não é promoção": os valores são informados individualmente pelo WhatsApp.
+Sem "antes e depois", sem promessas de resultado e sem preço, desconto ou "valor social" como chamariz. Valores e formato são combinados individualmente, de forma reservada, pelo WhatsApp.
 
 ## Publicar
 

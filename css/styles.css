@@ -980,3 +980,34 @@ body.menu-open .wa-fab { opacity: 0; pointer-events: none; }
 .voices__side[hidden] { display: none; }
 .voices:has(.voices__side[hidden]) { grid-template-columns: 1fr; max-width: 900px; text-align: center; }
 .voices:has(.voices__side[hidden]) .stars { justify-content: center; }
+
+/* =========================================================
+   SEU ACOMPANHAMENTO (conversa reservada)
+   ========================================================= */
+.reserved {
+  position: relative; overflow: hidden;
+  max-width: 860px; margin: 0 auto;
+  padding: clamp(2.4rem, 6vw, 4rem) clamp(1.6rem, 6vw, 4.5rem);
+  border-radius: var(--radius);
+  background: var(--green); color: #E3ECE1;
+  text-align: center;
+}
+.reserved__mark { position: absolute; right: -30px; bottom: -40px; width: 200px; opacity: .1; pointer-events: none; }
+.reserved__text {
+  position: relative; margin: 0 auto 1.4rem; max-width: 40rem;
+  font-family: var(--serif); font-style: italic; font-weight: 380;
+  font-size: clamp(1.25rem, 2.6vw, 1.65rem); line-height: 1.45; color: var(--peach-50);
+  font-variation-settings: "SOFT" 80, "opsz" 36;
+}
+.reserved__sign { position: relative; margin: 0 0 1.8rem; font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; color: var(--peach); }
+.reserved .btn { position: relative; }
+.reserved__points {
+  list-style: none; margin: 2.6rem auto 0; padding: 0; max-width: 980px;
+  display: grid; gap: 1rem;
+}
+.reserved__points li {
+  padding: 1.4rem 1.5rem; border-radius: 20px; background: var(--paper); border: 1px solid var(--lilac);
+  color: var(--ink-soft); font-size: .95rem;
+}
+.reserved__points strong { display: block; margin-bottom: .35rem; font-family: var(--serif); font-weight: 500; font-size: 1.15rem; color: var(--violet); }
+@media (min-width: 820px) { .reserved__points { grid-template-columns: repeat(3, 1fr); gap: 1.4rem; } }

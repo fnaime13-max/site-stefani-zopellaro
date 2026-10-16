@@ -453,16 +453,6 @@
     if (field) field.focus();
   }
 
-  /* Botões "Perguntar sobre o valor social": marcam a opção no formulário e levam até ele */
-  document.querySelectorAll('[data-tipo]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var tipo = btn.getAttribute('data-tipo') === 'social' ? 'Valor social' : 'Particular';
-      var radio = form && form.querySelector('input[name="tipo"][value="' + tipo + '"]');
-      if (radio) radio.checked = true;
-      goTo('#contato');
-    });
-  });
-
   if (form) {
     /* máscara simples de telefone brasileiro */
     var phone = form.elements['whatsapp'];
@@ -481,8 +471,6 @@
       var nome = form.elements['nome'].value.trim();
       var tel = phone.value.replace(/\D/g, '');
       var objetivo = form.elements['objetivo'].value.trim();
-      var tipoEl = form.querySelector('input[name="tipo"]:checked');
-      var tipo = tipoEl ? tipoEl.value : 'Particular';
 
       if (nome.length < 2) return showError('Por favor, informe seu nome.', form.elements['nome']);
       if (tel.length < 10) return showError('Informe um WhatsApp válido, com DDD.', phone);
@@ -491,7 +479,6 @@
       var msg =
         'Olá, Stefani! Meu nome é ' + nome + '.\n' +
         'Gostaria de conversar sobre uma consulta.\n' +
-        'Tipo de atendimento: ' + tipo + '\n' +
         'Objetivo: ' + objetivo + '\n' +
         'Meu WhatsApp: ' + phone.value;
 

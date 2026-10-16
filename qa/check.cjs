@@ -13,8 +13,8 @@ const url = require('url').pathToFileURL(path.resolve(__dirname, '../index.html'
     console.log(w, 'links WA:', wa.length, 'ok:', wa.every(Boolean), 'fab visível:', fab, 'abre:', popup ? popup.url().slice(0, 60) : 'não', errs.join('|') || 'sem erros');
     if (popup) await popup.close();
     await p.screenshot({ path: path.join(__dirname, `c-hero-${w}.png`) });
-    await p.evaluate(() => document.querySelector('#valor-social').scrollIntoView()); await p.waitForTimeout(900);
-    await p.screenshot({ path: path.join(__dirname, `c-social-${w}.png`) });
+    await p.evaluate(() => document.querySelector('#acompanhamento').scrollIntoView()); await p.waitForTimeout(900);
+    await p.screenshot({ path: path.join(__dirname, `c-acomp-${w}.png`) });
   }
   await b.close();
 })();
