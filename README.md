@@ -41,3 +41,6 @@ Enquanto as fotos não existirem, aparecem placeholders sinalizados no lugar.
 
 Qualquer hospedagem estática (Netlify, Vercel, Cloudflare Pages, GitHub Pages): envie a pasta inteira.
 Teste local: `python -m http.server 8000` na pasta e abra `http://localhost:8000`.
+
+## Atualizar o site
+A cada mudança em `css/` ou `js/`, aumente o `?v=` nos links do `index.html` (ex.: `?v=20261018`). Sem isso, quem já visitou pode ver o estilo antigo misturado com a página nova.
