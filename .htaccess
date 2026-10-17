@@ -2,6 +2,10 @@
 DirectoryIndex index.html
 Options -Indexes
 
+# Arquivos internos do repositório (o deploy via Git envia tudo): não ficam públicos
+RedirectMatch 404 ^/(qa|_originais|\.git)(/|$)
+RedirectMatch 404 ^/(README\.md|\.gitignore|\.nojekyll)$
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   # Ativar SÓ depois que o SSL estiver ligado no hPanel (tirar os # das 3 linhas):
