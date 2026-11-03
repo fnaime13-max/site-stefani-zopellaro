@@ -30,10 +30,11 @@
        Fraunces (eixo SOFT) conversa com as serifas suaves do logo; Instrument Sans no texto corrido. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Instrument+Sans:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 
-  <link rel="preload" href="./assets/monograma.png" as="image">
-  <link rel="stylesheet" href="./css/styles.css?v=20261017">
+  <link rel="preload" href="./assets/monograma.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="./css/styles.min.css?v=20261102">
 
   <!-- Dados estruturados -->
   <script type="application/ld+json">
@@ -76,7 +77,7 @@
         <circle cx="60" cy="60" r="56" />
         <circle class="preloader__ring-fill" cx="60" cy="60" r="56" />
       </svg>
-      <img class="preloader__mark" src="./assets/monograma.png" alt="" width="326" height="598">
+      <img class="preloader__mark" src="./assets/monograma.webp" alt="" width="326" height="598">
     </div>
     <p class="preloader__words" aria-hidden="true">
       <span>nutrição</span> <span>que</span> <em>compreende</em>
@@ -92,10 +93,10 @@
     <a class="brand" href="#inicio" aria-label="Stefani Rafaeli Zopellaro, voltar ao início">
       <!-- ===== LOGO =====
            O logo completo fica na RAIZ do projeto: ./logo.png (serpente botânica, fundo transparente;
-           original em ./_originais/). No header usamos só o monograma (./assets/monograma.png) + o nome em texto,
+           original em ./_originais/). No header usamos só o monograma (./assets/monograma.webp) + o nome em texto,
            porque o logo vertical é alto demais para a barra. Para usar um logo horizontal
            oficial, troque o src abaixo e apague o <span class="brand__name">. -->
-      <img src="./assets/monograma.png" alt="Monograma S de serpente com margarida e folhas, logo de Stefani Rafaeli Zopellaro" class="brand__mark" width="326" height="598">
+      <img src="./assets/monograma.webp" alt="Monograma S de serpente com margarida e folhas, logo de Stefani Rafaeli Zopellaro" class="brand__mark" width="326" height="598">
       <span class="brand__name">Stefani Rafaeli Zopellaro</span>
     </a>
 
@@ -133,15 +134,15 @@
       </h1>
 
       <!-- ===== FOTO 1 · HERO =====
-           Arquivo: ./assets/hero.jpg  (retrato VERTICAL, proporção 3:4, mínimo 1200x1600px)
+           Arquivo: ./assets/hero.webp (original em hero.jpg)  (retrato VERTICAL, proporção 3:4, mínimo 1200x1600px)
            O recorte em arco é aplicado pelo CSS. Prefira luz natural, fundo limpo e
            expressão espontânea. Enquanto o arquivo não existir, aparece o placeholder. -->
       <figure class="hero__photo reveal">
         <div class="photo-slot" role="img" aria-label="Espaço reservado para a foto principal de Stefani Rafaeli Zopellaro">
-          <img src="./assets/monograma.png" alt="" class="photo-slot__mark">
+          <img src="./assets/monograma.webp" alt="" class="photo-slot__mark">
           <span>Foto principal<small>assets/hero.jpg · 3:4</small></span>
         </div>
-        <img src="./assets/hero.jpg" alt="Stefani Rafaeli Zopellaro, nutricionista, sorrindo, com cabelos ruivos ondulados e blusa vinho, em casa com plantas ao fundo" width="1073" height="1430" fetchpriority="high"
+        <img src="./assets/hero.webp" alt="Stefani Rafaeli Zopellaro, nutricionista, sorrindo, com cabelos ruivos ondulados e blusa vinho, em casa com plantas ao fundo" width="1073" height="1430" fetchpriority="high"
              onerror="this.remove()">
         <!-- Galhos com folhas e lavanda: desenhados pelo JS (js/main.js · "Botânica") -->
         <svg class="botany botany--hero" id="botany-hero" viewBox="0 0 400 533" aria-hidden="true"></svg>
@@ -149,7 +150,7 @@
           <defs><path id="circ" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
           <text><textPath href="#circ" textLength="462" lengthAdjust="spacing">escuta · autonomia · acolhimento · individualidade ·</textPath></text>
         </svg>
-        <img class="hero__badge-mark" src="./assets/monograma.png" alt="" aria-hidden="true">
+        <img class="hero__badge-mark" src="./assets/monograma.webp" alt="" aria-hidden="true">
       </figure>
 
       <div class="hero__left reveal">
@@ -194,15 +195,15 @@
 
         <div class="about__media reveal">
           <!-- ===== FOTO 2 · SOBRE MIM =====
-               Arquivo: ./assets/sobre.jpg (proporção 4:5, mínimo 1000x1250px).
+               Arquivo: ./assets/sobre.webp (original em sobre.jpg) (proporção 4:5, mínimo 1000x1250px).
                Sugestão: em atendimento, na cozinha ou num momento espontâneo,
                algo que mostre quem você é fora da pose. -->
           <div class="about__frame">
             <div class="photo-slot photo-slot--dark" role="img" aria-label="Espaço reservado para a foto da seção Sobre mim">
-              <img src="./assets/monograma-claro.png" alt="" class="photo-slot__mark">
+              <img src="./assets/monograma-claro.webp" alt="" class="photo-slot__mark">
               <span>Foto sobre mim<small>assets/sobre.jpg · 4:5</small></span>
             </div>
-            <img src="./assets/sobre.jpg" alt="Retrato de Stefani Rafaeli Zopellaro sorrindo, de blusa vinho, em fundo claro" width="1086" height="1357" loading="lazy"
+            <img src="./assets/sobre.webp" alt="Retrato de Stefani Rafaeli Zopellaro sorrindo, de blusa vinho, em fundo claro" width="1086" height="1357" loading="lazy"
                  onerror="this.remove()">
           </div>
           <p class="about__sign" aria-hidden="true">“Ser diferente é uma arte.”</p>
@@ -316,7 +317,7 @@
       </div>
 
       <article class="reserved reveal">
-        <img class="reserved__mark" src="./assets/monograma-claro.png" alt="" aria-hidden="true">
+        <img class="reserved__mark" src="./assets/monograma-claro.webp" alt="" aria-hidden="true">
         <p class="reserved__text">
           “Acredito em uma nutrição acolhedora, que respeita a sua história, a sua rotina e o momento que você está vivendo. Se você deseja iniciar o seu acompanhamento e busca um cuidado focado na sua realidade individual, clique no botão abaixo para conversarmos de forma reservada pelo WhatsApp.”
         </p>
@@ -451,7 +452,7 @@
           <h2 id="contact-title" class="reveal">Conte um pouco sobre o que você <em>procura.</em></h2>
           <p class="reveal">Ao enviar, o WhatsApp abre com a sua mensagem pronta. Respondo assim que possível, em horário comercial.</p>
           <p class="contact__direct reveal">Prefere ir direto? <a href="#contato" data-wa="Olá, Stefani! Vim pelo site e gostaria de agendar uma consulta."><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Abrir o WhatsApp agora</a></p>
-          <img class="contact__mark" src="./assets/monograma-claro.png" alt="" aria-hidden="true">
+          <img class="contact__mark" src="./assets/monograma-claro.webp" alt="" aria-hidden="true">
         </div>
         <div class="canopy canopy--contact" aria-hidden="true"></div>
         <svg class="botany botany--contact" id="botany-contact" viewBox="0 0 320 320" aria-hidden="true"></svg>
@@ -477,8 +478,8 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <!-- Logo completo (./logo.png, fundo transparente, na raiz do projeto) -->
-    <img class="footer__logo" src="./logo.png" alt="Logo de Stefani Rafaeli Zopellaro, nutricionista: monograma S de serpente com margarida e folhas" width="844" height="1129" loading="lazy">
+    <!-- Logo completo (./assets/logo.webp, versão leve do ./logo.png da raiz) -->
+    <img class="footer__logo" src="./assets/logo.webp" alt="Logo de Stefani Rafaeli Zopellaro, nutricionista: monograma S de serpente com margarida e folhas" width="400" height="535" loading="lazy">
     <div class="footer__id">
       <p class="footer__name">Stefani Rafaeli Zopellaro</p>
       <p>Nutricionista · CRN-8 11639</p>
@@ -505,6 +506,6 @@
     <span>Fale comigo</span>
   </a>
 
-  <script src="./js/main.js?v=20261017"></script>
+  <script src="./js/main.min.js?v=20261102" defer></script>
 </body>
 </html>

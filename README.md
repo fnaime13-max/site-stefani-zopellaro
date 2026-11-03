@@ -44,3 +44,9 @@ Teste local: `python -m http.server 8000` na pasta e abra `http://localhost:8000
 
 ## Atualizar o site
 A cada mudança em `css/` ou `js/`, aumente o `?v=` nos links do `index.html` (ex.: `?v=20261018`). Sem isso, quem já visitou pode ver o estilo antigo misturado com a página nova.
+
+## Otimização (2026-11-02)
+- O `index.html` carrega `css/styles.min.css` e `js/main.min.js`. Edite os arquivos normais e regere os minificados:
+  `npx esbuild css/styles.css --minify --outfile=css/styles.min.css` e `npx esbuild js/main.js --minify --outfile=js/main.min.js`.
+  Depois troque o `?v=` dos dois links no `index.html`.
+- As imagens da página são WebP (`assets/*.webp`). Os JPG/PNG originais continuam no repositório como fonte.

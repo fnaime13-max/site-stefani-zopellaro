@@ -81,8 +81,8 @@
   var burger = document.getElementById('burger');
   var nav = document.getElementById('nav');
   var brandMark = document.querySelector('.brand__mark');
-  var MARK_GREEN = './assets/monograma.png';
-  var MARK_PEACH = './assets/monograma-claro.png';
+  var MARK_GREEN = './assets/monograma.webp';
+  var MARK_PEACH = './assets/monograma-claro.webp';
 
   function setMenu(open) {
     nav.classList.toggle('is-open', open);
